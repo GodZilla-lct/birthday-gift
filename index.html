@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="THE CASE OF THE SUSPICIOUSLY CUTE HUMAN — a playful birthday investigation." />
+  <meta name="theme-color" content="#F9DDE8" />
+  <title>The Case of the Suspiciously Cute Human</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#ambush">Skip to content</a>
+
+  <div class="decor" aria-hidden="true">
+    <span class="float float-heart" style="--x:8%; --y:12%; --d:0s; --s:0.9"></span>
+    <span class="float float-star" style="--x:86%; --y:18%; --d:1.2s; --s:0.7"></span>
+    <span class="float float-flower" style="--x:14%; --y:48%; --d:2.1s; --s:0.8"></span>
+    <span class="float float-sparkle" style="--x:78%; --y:42%; --d:0.6s; --s:0.65"></span>
+    <span class="float float-bow" style="--x:90%; --y:68%; --d:1.8s; --s:0.75"></span>
+    <span class="float float-heart" style="--x:6%; --y:78%; --d:2.6s; --s:0.7"></span>
+    <span class="float float-star" style="--x:48%; --y:8%; --d:0.9s; --s:0.55"></span>
+  </div>
+
+  <main>
+    <!-- 1. Opening ambush -->
+    <section id="ambush" class="section ambush" aria-labelledby="ambush-title">
+      <div class="section-inner">
+        <p class="eyebrow" data-content="ambushEyebrow"></p>
+        <h1 id="ambush-title" class="brand" data-content="ambushHeadline"></h1>
+        <p class="invite-lead" data-content="ambushSubtext"></p>
+
+        <div class="ambush-stage" id="ambush-stage">
+          <button type="button" class="btn-primary" id="ambush-btn" data-content="ambushButton"></button>
+          <p class="ambush-response" id="ambush-response" hidden aria-live="polite"></p>
+          <div class="dramatic-alert" id="dramatic-alert" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Classified case file -->
+    <section id="casefile" class="section casefile is-hidden" aria-labelledby="casefile-title" hidden>
+      <div class="section-inner">
+        <p class="eyebrow" data-content="casefileEyebrow"></p>
+        <h2 id="casefile-title" class="section-title handwritten" data-content="casefileTitle"></h2>
+        <p class="section-sub" data-content="casefileSub"></p>
+
+        <div class="case-folder card-shell" id="case-folder">
+          <div class="case-tab" aria-hidden="true"></div>
+          <div class="classified-stamp" id="classified-stamp" aria-hidden="true" data-content="classifiedLabel"></div>
+          <dl class="case-meta">
+            <div class="case-row">
+              <dt data-content="caseSubjectLabel"></dt>
+              <dd data-content="caseSubject"></dd>
+            </div>
+            <div class="case-row">
+              <dt data-content="caseStatusLabel"></dt>
+              <dd data-content="caseStatus"></dd>
+            </div>
+            <div class="case-row">
+              <dt data-content="caseChargesLabel"></dt>
+              <dd data-content="caseCharges"></dd>
+            </div>
+          </dl>
+        </div>
+
+        <button type="button" class="btn-primary" id="evidence-btn" data-content="evidenceButton"></button>
+        <div class="evidence-stack" id="evidence-stack" aria-live="polite"></div>
+        <button type="button" class="btn-secondary is-hidden" id="casefile-continue" hidden data-content="casefileContinue"></button>
+      </div>
+    </section>
+
+    <!-- 4. Birthday celebration -->
+    <section id="birthday" class="section birthday is-hidden" aria-labelledby="birthday-title" hidden>
+      <div class="section-inner">
+        <h2 id="birthday-title" class="section-title handwritten">Happy Birthday! 🎉</h2>
+        <p class="section-sub" data-content="cakeSub"></p>
+        
+        <div class="party-scene" aria-hidden="true">
+          <div class="balloon balloon-a"></div>
+          <div class="balloon balloon-b"></div>
+          <div class="balloon balloon-c"></div>
+          <div class="confetti" id="birthday-confetti"></div>
+        </div>
+        
+        <div class="cake-wrap">
+          <button type="button" class="candle-hit" id="candle-btn" aria-label="Extinguish the birthday candle" aria-pressed="false">
+            <div class="cake" aria-hidden="true">
+              <div class="cake-plate"></div>
+              <div class="cake-layer cake-bottom"></div>
+              <div class="cake-layer cake-top"></div>
+              <div class="cake-frosting"></div>
+              <div class="cake-cherry"></div>
+              <div class="candle">
+                <div class="candle-stick"></div>
+                <div class="flame" id="flame"></div>
+                <div class="smoke" id="smoke"></div>
+              </div>
+            </div>
+          </button>
+          <p class="candle-msg" id="candle-msg" data-content="candleHint" aria-live="polite"></p>
+        </div>
+
+        <button type="button" class="btn-primary is-hidden" id="birthday-continue" hidden>Continue to Gifts</button>
+      </div>
+    </section>
+
+    <!-- 5. Useless gift challenge -->
+    <section id="gifts" class="section gifts is-hidden" aria-labelledby="gifts-title" hidden>
+      <div class="section-inner">
+        <h2 id="gifts-title" class="section-title handwritten" data-content="giftsTitle"></h2>
+        <p class="section-sub" data-content="giftsSub"></p>
+
+        <div class="mystery-grid" id="gift-grid"></div>
+        <p class="gift-nudge" id="gift-nudge" data-content="giftNudge" aria-live="polite"></p>
+
+        <div class="real-gift-reveal is-hidden" id="real-gift-reveal" hidden>
+          <p class="real-gift-msg" id="real-gift-msg"></p>
+          <div class="party-scene" aria-hidden="true">
+            <div class="confetti" id="gift-confetti"></div>
+          </div>
+        </div>
+
+        <button type="button" class="btn-primary is-hidden" id="gifts-continue" hidden>Continue</button>
+      </div>
+    </section>
+
+    <!-- 5. Privilege Test -->
+    <section id="privilege" class="section privilege is-hidden" aria-labelledby="privilege-title" hidden>
+      <div class="section-inner">
+        <h2 id="privilege-title" class="section-title handwritten" data-content="privilegeTitle"></h2>
+
+        <div class="quiz-block" id="quiz-block">
+          <p class="quiz-question" data-content="privilegeQuestion"></p>
+          <div class="quiz-actions">
+            <button type="button" class="btn-quiz" id="quiz-always" data-content="privilegeAlways"></button>
+            <button type="button" class="btn-quiz btn-quiz-alt" id="quiz-mind" data-content="privilegeMind"></button>
+          </div>
+          <p class="quiz-response" id="quiz-response" hidden aria-live="polite"></p>
+        </div>
+
+        <button type="button" class="btn-primary is-hidden" id="privilege-continue" hidden data-content="privilegeContinue"></button>
+      </div>
+    </section>
+
+    <!-- 6. Final plot twist -->
+    <section id="finale" class="section finale is-hidden" aria-labelledby="finale-title" hidden>
+      <div class="section-inner">
+        <h2 id="finale-title" class="section-title handwritten" data-content="finaleTitle"></h2>
+
+        <p class="finale-pause" id="finale-pause" data-content="finalePause"></p>
+
+        <div class="finale-letter-wrap is-hidden" id="finale-letter-wrap" hidden>
+          <div class="letter-paper card-shell">
+            <p class="letter-heading" data-content="finaleLetterHeading"></p>
+            <p class="letter-text" id="letter-text" aria-live="polite"></p>
+          </div>
+          <p class="closing" data-content="finaleClosing"></p>
+        </div>
+
+        <button type="button" class="btn-replay" id="replay-btn" hidden data-content="replayButton"></button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p data-content="footer"></p>
+    <button type="button" class="secret-btn" id="secret-btn" aria-label="Do not press this button" data-content="secretButton"></button>
+  </footer>
+
+  <div class="secret-toast" id="secret-toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
